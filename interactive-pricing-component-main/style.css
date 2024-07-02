@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(230, 100%, 99%);
+    background-image: url(images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 65%;
+}
+
+header {
+    height: 23vh;
+    line-height: 2.2em;
+    margin-top: 80px;
+    text-align: center;
+}
+
+header p {
+    color: hsl(227, 35%, 25%);
+    font-size: 28px;
+}
+
+header .line-ii {
+    color: hsl(225, 20%, 60%);
+    font-size: 14px;
+}
+
+header span {
+    color: hsl(225, 20%, 60%);
+    font-size: 14px;
+}
+
+.logo img {
+    position: absolute;
+    transform: translate(-50%, -80%);
+}
+
+.main-container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px 2px hsl(224, 65%, 95%);
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 450px;
+}
+
+.flex-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.viewers {
+    padding: 0 30px;
+}
+
+.viewers p {
+    color: hsl(225, 20%, 60%);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.viewers span {
+    margin: 0 5px;
+}
+
+.pay-per-month {
+    align-items: center;
+    display: flex;
+    padding: 0 30px;
+}
+
+.pay-per-month p {
+    color: hsl(227, 35%, 25%);
+    font-size: 32px;
+    font-weight: 550;
+}
+
+.pay-per-month .monthly {
+    color: hsl(225, 20%, 60%);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0 5px;
+}
+
+.myrange {
+    /* flex-basis: 100%; */
+    margin: 30px 0;
+    padding: 0 30px;
+    width: 450px;
+}
+
+input#slider {
+    background: linear-gradient(to right,
+            hsl(174, 77%, 80%) 0%,
+            hsl(174, 77%, 80%) 50%,
+            hsl(224, 65%, 95%) 0%,
+            hsl(224, 65%, 95%) 100%);
+    border-radius: 10px;
+    height: 1.7vh;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input#slider::-webkit-slider-thumb {
+    background-color: hsl(174, 86%, 45%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0px 7px 20px 4px cyan;
+    cursor: pointer;
+    height: 6vh;
+    -webkit-appearance: none;
+    width: 40px;
+}
+
+.billing-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 18px 30px;
+}
+
+.billing-container p {
+    color: hsl(225, 20%, 60%);
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+.billing-container .discount {
+    background-color: hsl(14, 92%, 95%);
+    border-radius: 5px;
+    color: hsl(15, 100%, 70%);
+    font-size: 11px;
+    margin: 0 5px;
+    padding: 2px 3px;
+}
+
+.discount-hidden {
+    background-color: hsl(14, 92%, 95%);
+    border-radius: 10px;
+    color: hsl(15, 100%, 70%);
+    display: none;
+    font-size: 11px;
+    margin: 0 2px;
+    padding: 2px 8px;
+}
+
+.toggle-container {
+    background-color: hsl(224, 65%, 95%);
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    height: 3vh;
+    position: relative;
+    width: 40px;
+}
+
+.toggle-container input {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.toggle-slider {
+    background-color: white;
+    border-radius: 50%;
+    bottom: 0;
+    cursor: pointer;
+    height: 2.3vh;
+    left: 3px;
+    position: absolute;
+    right: 0;
+    top: 1.8px;
+    transition: all 0.2s ease;
+    width: 16px;
+}
+
+.toggle-container:hover {
+    background-color: hsl(174, 77%, 80%);
+}
+
+.toggle-container input:checked+.toggle-slider {
+    transform: translateX(19px);
+}
+
+hr {
+    margin: 15px 0;
+}
+
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 0 30px;
+}
+
+footer li {
+    color: hsl(225, 20%, 60%);
+    font-size: 13px;
+    line-height: 20px;
+    list-style: none;
+}
+
+footer img {
+    padding: 0 8px;
+}
+
+button {
+    background-color: hsl(227, 35%, 25%);
+    border: none;
+    border-radius: 20px;
+    height: 5.3vh;
+    width: 135px;
+}
+
+button p {
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+button p:hover {
+    opacity: 1;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 375px) {
+    body {
+        background-size: 100% 45%;
+    }
+
+    header {
+        height: 20vh;
+        line-height: 2.2em;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 20px;
+        font-weight: 550;
+    }
+
+    header .line-ii {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    header span {
+        display: block;
+        font-size: 13px;
+    }
+
+    .main-container {
+        width: 335px;
+        text-align: center;
+    }
+
+    .flex-header {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .viewers {
+        order: 1;
+    }
+
+    .pay-per-month {
+        order: 3;
+    }
+
+    .pay-per-month p {
+        font-size: 29px;
+    }
+
+    .myrange {
+        order: 2;
+        padding: 10px 0;
+        width: 300px;
+    }
+
+    input#slider {
+        height: 1.2vh;
+    }
+
+    input#slider::-webkit-slider-thumb {
+        height: 5.5vh;
+        width: 37px;
+    }
+
+    .billing-container {
+        margin: 5px 0;
+        padding: 18px 5px;
+    }
+
+    .billing-container p {
+        padding: 0 5px;
+    }
+
+
+    .billing-container .discount {
+        display: none;
+    }
+
+    .discount-hidden {
+        display: block;
+    }
+
+    .toggle-container {
+        margin: 0 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    button {
+        height: 5vh;
+        margin: 25px 0;
+    }
+
+    button p {
+        font-size: 11.5px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
